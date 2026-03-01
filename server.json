@@ -6,7 +6,7 @@
     "url": "https://github.com/GJB65/compliance-mcp-server",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "remotes": [
     {
       "type": "streamable-http",
