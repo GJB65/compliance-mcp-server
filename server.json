@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.gjb65/compliance-intelligence",
+  "description": "Compliance knowledge graph: 692+ frameworks, 13,700+ controls, 280K+ cross-framework mappings.",
+  "repository": {
+    "url": "https://github.com/GJB65/compliance-mcp-server",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://api.theartofservice.com/mcp/sse"
+    }
+  ]
+}
