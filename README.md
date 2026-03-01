@@ -4,11 +4,11 @@ A remote MCP (Model Context Protocol) server providing AI agents with access to 
 
 ## Quick Start
 
-### Connect via SSE
+### Connect via Streamable HTTP
 
 ```
-URL: https://api.theartofservice.com/mcp/sse
-Transport: SSE (Server-Sent Events)
+URL: https://api.theartofservice.com/mcp
+Transport: Streamable HTTP
 Authentication: Bearer token (API key)
 ```
 
@@ -20,7 +20,7 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "compliance-intelligence": {
-      "url": "https://api.theartofservice.com/mcp/sse",
+      "url": "https://api.theartofservice.com/mcp",
       "headers": {
         "Authorization": "Bearer tas_YOUR_API_KEY"
       }
@@ -36,7 +36,7 @@ Add to your MCP settings:
 ```json
 {
   "compliance-intelligence": {
-    "url": "https://api.theartofservice.com/mcp/sse",
+    "url": "https://api.theartofservice.com/mcp",
     "headers": {
       "Authorization": "Bearer tas_YOUR_API_KEY"
     }
