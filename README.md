@@ -4,11 +4,11 @@ A remote MCP (Model Context Protocol) server providing AI agents with access to 
 
 ## Quick Start
 
-### Connect via Streamable HTTP
+### Connect via SSE (Server-Sent Events)
 
 ```
 URL: https://api.theartofservice.com/mcp
-Transport: Streamable HTTP
+Transport: SSE
 Authentication: Bearer token (API key)
 ```
 
