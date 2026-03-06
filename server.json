@@ -9,7 +9,7 @@
   "version": "1.0.2",
   "remotes": [
     {
-      "type": "sse",
+      "type": "streamable-http",
       "url": "https://api.theartofservice.com/mcp"
     }
   ]
