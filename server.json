@@ -1,16 +1,28 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.GJB65/compliance-intelligence",
-  "description": "Compliance knowledge graph: 692+ frameworks, 13,700+ controls, 280K+ cross-framework mappings.",
+  "description": "Compliance knowledge graph: 692+ frameworks, 14,200+ controls, 819K+ cross-framework mappings.",
   "repository": {
     "url": "https://github.com/GJB65/compliance-mcp-server",
     "source": "github"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "remotes": [
     {
       "type": "streamable-http",
       "url": "https://api.theartofservice.com/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registry_name": "npm",
+      "name": "@theartofservice/compliance-mcp",
+      "version": "0.1.0"
+    },
+    {
+      "registry_name": "pypi",
+      "name": "theartofservice-compliance",
+      "version": "0.1.0"
     }
   ]
 }
