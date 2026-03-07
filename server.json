@@ -15,14 +15,20 @@
   ],
   "packages": [
     {
-      "registry_name": "npm",
-      "name": "@theartofservice/compliance-mcp",
-      "version": "0.1.0"
+      "registryType": "npm",
+      "identifier": "@theartofservice/compliance-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
     },
     {
-      "registry_name": "pypi",
-      "name": "theartofservice-compliance",
-      "version": "0.1.0"
+      "registryType": "pypi",
+      "identifier": "theartofservice-compliance",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }
