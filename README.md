@@ -1,15 +1,15 @@
 # TheArtOfService Compliance Intelligence MCP Server
 
-A remote MCP (Model Context Protocol) server providing AI agents with access to a comprehensive compliance knowledge graph containing **692+ compliance frameworks**, **13,700+ controls**, and **280,000+ cross-framework mappings**.
+A remote MCP (Model Context Protocol) server providing AI agents with access to a comprehensive compliance knowledge graph containing **692+ compliance frameworks**, **14,200+ controls**, and **819,000+ cross-framework mappings**.
 
 ## Quick Start
 
-### Connect via SSE (Server-Sent Events)
+### Connect via Streamable HTTP
 
 ```
 URL: https://api.theartofservice.com/mcp
-Transport: SSE
-Authentication: Bearer token (API key)
+Transport: Streamable HTTP
+Authentication: Bearer token (API key) — optional for up to 10 calls/day
 ```
 
 ### Claude Desktop Configuration
@@ -44,11 +44,29 @@ Add to your MCP settings:
 }
 ```
 
+### npm Package (stdio transport)
+
+```bash
+npm install -g @theartofservice/compliance-mcp
+```
+
+See [@theartofservice/compliance-mcp on npm](https://www.npmjs.com/package/@theartofservice/compliance-mcp).
+
+### Python / Langchain
+
+```bash
+pip install theartofservice-compliance
+```
+
+See [theartofservice-compliance on PyPI](https://pypi.org/project/theartofservice-compliance/).
+
 ## Getting an API Key
 
 1. Create a free account at [compliance.theartofservice.com](https://compliance.theartofservice.com/register)
 2. Navigate to Settings → API Keys
 3. Generate an API key (starts with `tas_`)
+
+**Anonymous access**: 10 calls/day with no API key required.
 
 ## Available Tools
 
@@ -65,52 +83,22 @@ Add to your MCP settings:
 | `agent_platform_stats` | Get platform statistics (framework, control, mapping counts) |
 | `agent_pricing_info` | Get API pricing tiers and current usage information |
 
-## Framework Coverage
-
-Access controls and cross-mappings for 692+ frameworks including:
-
-- **International Standards**: ISO 27001:2022, ISO 27701, ISO 22301, ISO 9001, ISO 14001
-- **US Frameworks**: NIST CSF 2.0, NIST SP 800-53 Rev 5, NIST SP 800-171, CMMC 2.0, FedRAMP
-- **Privacy Regulations**: GDPR, CCPA/CPRA, HIPAA, PIPEDA, LGPD, POPIA
-- **Industry Standards**: PCI DSS 4.0, SOC 2, HITRUST CSF, SWIFT CSCF
-- **Cyber Security**: CIS Controls v8, OWASP Top 10, MITRE ATT&CK, Essential Eight
-- **Australian Frameworks**: ISM, PSPF, APRA CPS 234, SOCI Act, Privacy Act 1988
-- **EU Regulations**: EU AI Act, DORA, NIS2 Directive, EU Cyber Resilience Act
-- **Governance & ESG**: COSO ERM, COBIT 2019, TCFD, GRI Standards, UN SDGs
-
-## Discovery
-
-- MCP Discovery: `https://api.theartofservice.com/.well-known/mcp.json`
-- OpenAI Plugin: `https://api.theartofservice.com/.well-known/ai-plugin.json`
-- OpenAPI Spec: `https://api.theartofservice.com/openapi.json`
-
-## Example Usage
-
-Once connected, you can ask your AI agent:
-
-- "What controls does ISO 27001:2022 have for access management?"
-- "Map the controls between NIST CSF 2.0 and ISO 27001:2022"
-- "Find all frameworks that cover data encryption requirements"
-- "What's the coverage overlap between SOC 2 and HIPAA?"
-- "Search for controls related to incident response"
-
 ## Pricing
 
-| Plan | Calls/Month | Price |
-|------|-------------|-------|
-| Free | 100 | $0 |
-| Professional | 10,000 | $49/month |
-| Enterprise | 100,000 | Custom |
+| Tier | Calls | Price |
+|------|-------|-------|
+| Anonymous | 10/day | Free |
+| Free account | 100/month | Free |
+| Professional | 10,000/month + $0.005 overage | $49/month |
+| Enterprise | 100,000/month + $0.005 overage | Custom |
 
-## REST API
+## Links
 
-In addition to MCP, a REST API is available at `https://api.theartofservice.com/api/agent/`. See the [OpenAPI spec](https://api.theartofservice.com/openapi.json) for full documentation.
-
-## Support
-
-- Website: [compliance.theartofservice.com](https://compliance.theartofservice.com)
-- Email: support@theartofservice.com
+- **Platform**: [compliance.theartofservice.com](https://compliance.theartofservice.com)
+- **API Docs**: [api.theartofservice.com/docs](https://api.theartofservice.com/docs)
+- **npm**: [@theartofservice/compliance-mcp](https://www.npmjs.com/package/@theartofservice/compliance-mcp)
+- **PyPI**: [theartofservice-compliance](https://pypi.org/project/theartofservice-compliance/)
 
 ## License
 
-This is a hosted service. The MCP server endpoint is provided by TheArtOfService Pty Ltd.
+MIT
